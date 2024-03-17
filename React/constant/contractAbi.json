@@ -1,0 +1,1557 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "Admin_Address",
+        "type": "address"
+      }
+    ],
+    "name": "AdminAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "Admin_Address",
+        "type": "address"
+      }
+    ],
+    "name": "AdminRemoved",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "DoctorAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "time",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "date",
+        "type": "string"
+      }
+    ],
+    "name": "AppointmentBooking",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "_from",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "_to",
+        "type": "address"
+      }
+    ],
+    "name": "OwnerChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "qualifications",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "contact",
+        "type": "string"
+      }
+    ],
+    "name": "RegisterDoctorEvent",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "contact",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "gender",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "rollnumber",
+        "type": "string"
+      }
+    ],
+    "name": "RegisterPatientEvent",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "Availability",
+        "type": "bool"
+      }
+    ],
+    "name": "updateAvailability",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "contact",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "gender",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "dob",
+        "type": "string"
+      }
+    ],
+    "name": "updateDoctorPersonalDetailsEvent",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "qualifications",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "departmentMajor",
+        "type": "string"
+      }
+    ],
+    "name": "updateDoctorProfessionalDetailsEvent",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "allergies",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "vaccins",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "height",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "weight",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "dob",
+        "type": "string"
+      }
+    ],
+    "name": "updatePatientEvent",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "contact",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "roll",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "gender",
+        "type": "string"
+      }
+    ],
+    "name": "updatePatientPersonalEvent",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "patientaddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "Status",
+        "type": "bool"
+      }
+    ],
+    "name": "updateStatus",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "Appointments",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "patientAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "DoctorAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "time",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "date",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "status",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "prescription",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "serialNumber",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "AppointmentsDoc",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "patientAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "DoctorAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "time",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "date",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "status",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "prescription",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "serialNumber",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "Doctors",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "qualifications",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "departmentMajor",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "gender",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "contact",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "dob",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "Availability",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "email",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "DoctorsList",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "addr",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "qualifications",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "departmentMajor",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "gender",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "contact",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "dob",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "Availability",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "email",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct Record.Doctor[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "Doctorserialnumber",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "Patients",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "rollnuber",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "contact",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "gender",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "allergies",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "vaccins",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "height",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "weight",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "dob",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "appointmentsCount",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "PatientsList",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "addr",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "rollnuber",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "contact",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "gender",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "allergies",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "vaccins",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "height",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "weight",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "dob",
+            "type": "string"
+          },
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "reason",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "ipfs",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct Record.Records[]",
+            "name": "records",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "appointmentsCount",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Record.Patient[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "Patientserialnumber",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_contact",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_email",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_gender",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_rollnumber",
+        "type": "string"
+      }
+    ],
+    "name": "Register",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_contact",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_qualifications",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_email",
+        "type": "string"
+      }
+    ],
+    "name": "RegisterDoctor",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "addAdmin",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "_reason",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_ipfs",
+        "type": "string"
+      }
+    ],
+    "name": "addRecord",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "appointments",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "patientAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "DoctorAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "time",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "date",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "status",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "prescription",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "serialNumber",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_docAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "_time",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_date",
+        "type": "string"
+      }
+    ],
+    "name": "bookAppointment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "doctors",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "qualifications",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "departmentMajor",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "gender",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "contact",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "dob",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "Availability",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "email",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getAllAppointments",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "patientAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "DoctorAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "time",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "date",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "status",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "prescription",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "serialNumber",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Record.Appointment[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getDoctorAppointments",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "patientAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "DoctorAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "time",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "date",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "status",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "prescription",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "serialNumber",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Record.Appointment[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getPatientAppointment",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "patientAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "DoctorAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "time",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "date",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "status",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "prescription",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "serialNumber",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Record.Appointment",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getPatientDetailes",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "addr",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "rollnuber",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "contact",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "gender",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "allergies",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "vaccins",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "height",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "weight",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "dob",
+            "type": "string"
+          },
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "reason",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "ipfs",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct Record.Records[]",
+            "name": "records",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "appointmentsCount",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Record.Patient",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "isDoctor",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "isPatient",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "patients",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "rollnuber",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "contact",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "gender",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "allergies",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "vaccins",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "height",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "weight",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "dob",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "appointmentsCount",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "removeAdmin",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "_availability",
+        "type": "bool"
+      }
+    ],
+    "name": "setAvailability",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      }
+    ],
+    "name": "setOwner",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "i",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "_status",
+        "type": "bool"
+      }
+    ],
+    "name": "setStatus",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_contact",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_gender",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_dob",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_email",
+        "type": "string"
+      }
+    ],
+    "name": "updateDocterPersonalDetails",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_qualifications",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_departmentMajor",
+        "type": "string"
+      }
+    ],
+    "name": "updateDocterProfessionalDetails",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_contact",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_roll",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_email",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_gender",
+        "type": "string"
+      }
+    ],
+    "name": "updatePatientPersonal",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_allergies",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_vaccins",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_height",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_weight",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_dob",
+        "type": "string"
+      }
+    ],
+    "name": "updatePatientmedicalRecord",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
